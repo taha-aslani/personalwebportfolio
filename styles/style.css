@@ -109,19 +109,15 @@ nav a:hover {
   z-index: 4;
 }
 
-.intro h1 {
+/* ABOUT ME PAGE */
+.intro .aboutme-head {
   margin-bottom: 50px;
   font-size: 2.5em;
   line-height: 1.2;
   filter: drop-shadow(#000 1px 0 7px) !important;
 }
 
-.intro h3 {
-  filter: drop-shadow(#000 1px 0 7px) !important;
-  font-size: 1.5em;
-}
-
-.intro p {
+.intro .aboutme-paragraph {
   margin-top: 20px;
   font-size: 1.2em;
   color: #e0e0e0;
@@ -194,6 +190,7 @@ article {
   display: none;
 }
 
+/* RESUME PAGE */
 .resume-list {
   list-style: none;
   margin-top: 10px;
@@ -207,7 +204,16 @@ article {
 }
 .resume-list-item::after {
   content: '-';
-  margin-right: 4px;
+  margin-right: 5px;
+}
+
+.resume-list-item:last-child::after {
+  content: '';
+}
+
+.intro h3 {
+  filter: drop-shadow(#000 1px 0 7px) !important;
+  font-size: 1.5em;
 }
 
 @media (max-width: 640px) {

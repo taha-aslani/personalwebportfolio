@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پرتفوی من</title>
+    <style>
+        /* تنظیمات اولیه */
+body {
+    font-family: 'Vazir', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    direction: rtl;
+}
+
+/* استایل هدر */
+header {
+    background-color: #111;
+    padding: 20px 40px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.connect {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.connect span {
+    margin-left: 10px;
+}
+
+/* استایل بخش معرفی */
+.intro {
+    text-align: center;
+    padding: 150px 20px;
+    background: linear-gradient(135deg, #1f003d, #3e0072);
+    border-radius: 30px;
+    margin: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.559);
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.intro h2 {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 50px;
+}
+
+.scroll-hint {
+    margin-top: 50px;
+    font-size: 1.2em;
+}
+
+.social-icons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Designbyrefly</div>
+            <nav>
+                <ul>
+                    <li><a href="#">خانه</a></li>
+                    <li><a href="#">درباره ما</a></li>
+                    <li><a href="#">پروژه‌ها</a></li>
+                    <li><a href="#">تماس با ما</a></li>
+                </ul>
+            </nav>
+            <a class="connect" href="#">بیایید متصل شویم<span>→</span></a>
+        </div>
+    </header>
+
+    <section class="intro">
+        <h2>به پرتفوی من خوش آمدید!</h2>
+        <h1>طراح UI از مالانگ، اندونزی.</h1>
+        <h1>علاقه‌مند به طراحی‌های ساده و مینیمال</h1>
+        <h1>رابط کاربری</h1>
+        <div class="scroll-hint">
+            <p>برای مشاهده بیشتر اسکرول کنید</p>
+        </div>
+        <div class="social-icons">
+            <a href="#">دریبل</a>
+            <a href="#">اینستاگرام</a>
+            <a href="#">لینکدین</a>
+        </div>
+    </section>
+</body>
+</html>

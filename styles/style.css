@@ -204,7 +204,7 @@ article {
   align-items: flex-start;
   gap: 5px;
   font-size: 1.1em;
-  color: #e0e0e0;
+  color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.559);
   background-color: #11111164;
   backdrop-filter: blur(3px);
@@ -231,7 +231,7 @@ article {
 
 .resume-content {
   display: flex;
-  margin: 0 50px;
+  margin: 0 70px 0 50px;
   justify-content: space-between;
 }
 
@@ -248,6 +248,7 @@ article {
 }
 
 .language-list {
+  text-align: right;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -321,7 +322,7 @@ article {
 
 @media (max-width: 705px) {
   .skill-resume-list {
-    font-size: 0.9em;
+    font-size: 1em;
     padding: 10px;
   }
 

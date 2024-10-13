@@ -297,4 +297,55 @@ article {
   nav ul {
     gap: 13px;
   }
+
+  .resume-content {
+    flex-direction: column;
+  }
+
+  .skill-resume-list {
+    align-items: center;
+  }
+
+  .language-list {
+    align-items: center;
+  }
+
+  .educational-records {
+    margin-bottom: 20px;
+  }
+
+  .skills-list {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 705px) {
+  .skill-resume-list {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  .skill-resume-list-item i {
+    font-size: 13px;
+  }
+
+  .intro .resume-head3 {
+    font-size: 1.3em;
+  }
+
+  .intro .resume-head1 {
+    font-size: 2.2em;
+  }
+
+  .language-list li i {
+    font-size: 13px;
+  }
+
+  .language-list {
+    padding: 10px;
+  }
+
+  .educational-record {
+    padding: 10px;
+  }
 }

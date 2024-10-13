@@ -103,7 +103,7 @@ nav a:hover {
 .intro {
   position: sticky;
   text-align: center;
-  padding: 100px 20px;
+  padding: 80px 20px;
   background-color: #11111164;
   backdrop-filter: blur(5px);
   border-radius: 30px;
@@ -205,11 +205,16 @@ article {
   gap: 5px;
   font-size: 1.1em;
   color: #e0e0e0;
-  filter: drop-shadow(#000 1px 0 7px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.559);
+  background-color: #11111164;
+  backdrop-filter: blur(3px);
+  border-radius: 20px;
+  padding: 20px;
 }
-.skill-resume-list-item::before {
-  content: '-';
-  margin-left: 5px;
+
+.skill-resume-list-item i {
+  font-size: 15px;
+  margin-left: 6px;
 }
 
 .intro .resume-head3 {
@@ -233,8 +238,30 @@ article {
 .educational-record {
   border: 1px solid rgba(255, 255, 255, 0.559);
   background-color: #11111164;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   border-radius: 20px;
+  padding: 20px;
+}
+
+.tajrobi {
+  margin-bottom: 10px;
+}
+
+.language-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.559);
+  background-color: #11111164;
+  backdrop-filter: blur(3px);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.language-list li i {
+  font-size: 15px;
+  margin-left: 6px;
 }
 
 @media (max-width: 640px) {

@@ -265,6 +265,43 @@ article {
   margin-left: 6px;
 }
 
+/* PROJECTS PAGE */
+.intro .projects-head1 {
+  text-align: center;
+  margin: 0 auto 50px;
+  font-size: 2.5em;
+  line-height: 1.2;
+  filter: drop-shadow(#000 1px 0 7px) !important;
+}
+
+.intro .project-title {
+  filter: drop-shadow(#000 1px 0 7px) !important;
+  font-size: 1.4em;
+}
+
+.project {
+  border: 1px solid rgba(255, 255, 255, 0.559);
+  background-color: #11111164;
+  backdrop-filter: blur(3px);
+  border-radius: 20px;
+  padding: 20px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.projects-content {
+  line-height: 40px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8%;
+  justify-content: center;
+}
+
+.project-date {
+  font-size: 1em;
+  color: #9d9d9d;
+}
+
 @media (max-width: 640px) {
   .gradientback {
     width: 55vw;
@@ -348,5 +385,28 @@ article {
 
   .educational-record {
     padding: 10px;
+  }
+
+  .projects-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .project {
+    width: 70%;
+  }
+
+  .project-date {
+    font-size: 0.9em;
+  }
+
+  .intro .project-title {
+    font-size: 1.2em;
+  }
+
+  .intro .projects-head1 {
+    font-size: 2.2em;
   }
 }

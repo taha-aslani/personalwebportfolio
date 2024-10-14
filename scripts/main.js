@@ -137,6 +137,8 @@ const toggleElementButtons = function (elem) {
   }
 };
 
-$('a').click(function () {
-  toggleElementButtons(this);
+document.querySelectorAll('a').forEach((a) => {
+  a.addEventListener('click', function () {
+    toggleElementButtons(this);
+  });
 });

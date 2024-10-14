@@ -234,7 +234,6 @@ article {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 5px;
 }
 
 .skill-resume-list-item,

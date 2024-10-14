@@ -225,6 +225,7 @@ article {
   border-radius: 20px;
   padding: 13px;
   width: 100%;
+  line-height: 40px;
   max-width: 300px;
 }
 
@@ -257,10 +258,14 @@ article {
   margin-bottom: 5px;
 }
 
-.institute,
 .gpa {
   font-size: 0.9em;
   color: #a4a4a4;
+}
+
+.institute {
+  color: #fff;
+  font-size: 0.9em;
 }
 
 .languages li span {
@@ -273,7 +278,6 @@ article {
   text-align: center;
   margin: 0 auto 50px;
   font-size: 2.5em;
-  line-height: 1.2;
   filter: drop-shadow(#000 1px 0 7px) !important;
 }
 

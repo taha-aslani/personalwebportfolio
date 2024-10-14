@@ -70,7 +70,7 @@ const particleconfig = {
         mode: 'repulse',
       },
       onclick: {
-        enable: true,
+        enable: false,
         mode: 'push',
       },
       resize: true,
@@ -87,7 +87,7 @@ const particleconfig = {
         size: 40,
         duration: 2,
         opacity: 8,
-        speed: 3,
+        speed: 2,
       },
       repulse: {
         distance: 200,

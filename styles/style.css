@@ -194,35 +194,8 @@ article {
 }
 
 /* RESUME PAGE */
-.skill-resume-list {
-  list-style: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 5px;
-  font-size: 1.1em;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.559);
-  background-color: #11111164;
-  backdrop-filter: blur(3px);
-  border-radius: 20px;
-  padding: 20px;
-}
-
-.skill-resume-list-item i {
-  font-size: 15px;
-  margin-left: 6px;
-}
-
-.intro .resume-head3 {
-  filter: drop-shadow(#000 1px 0 7px) !important;
-  font-size: 1.5em;
-}
-
-.intro .resume-head1 {
+.resume-head1 {
+  text-align: center;
   margin-bottom: 50px;
   font-size: 2.5em;
   line-height: 1.2;
@@ -231,38 +204,68 @@ article {
 
 .resume-content {
   display: flex;
-  margin: 0 70px 0 50px;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 0 50px;
+}
+
+.resume-head3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  filter: drop-shadow(#000 1px 0 7px) !important;
+}
+
+.skill-resume-list,
+.educational-record,
+.language-list {
+  border: 1px solid rgba(255, 255, 255, 0.559);
+  background-color: rgba(17, 17, 17, 0.39);
+  backdrop-filter: blur(3px);
+  border-radius: 20px;
+  padding: 13px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.skill-resume-list,
+.language-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.skill-resume-list-item,
+.language-item {
+  display: flex;
+  align-items: center;
+}
+
+.skill-resume-list-item i,
+.language-item i {
+  font-size: 15px;
+  margin-left: 6px;
 }
 
 .educational-record {
-  border: 1px solid rgba(255, 255, 255, 0.559);
-  background-color: #11111164;
-  backdrop-filter: blur(3px);
-  border-radius: 20px;
-  padding: 20px;
+  margin-bottom: 15px;
 }
 
-.tajrobi {
-  margin-bottom: 10px;
+.educational-record-subject {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.language-list {
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  list-style: none;
-  border: 1px solid rgba(255, 255, 255, 0.559);
-  background-color: #11111164;
-  backdrop-filter: blur(3px);
-  border-radius: 20px;
-  padding: 20px;
+.institute,
+.gpa {
+  font-size: 0.9em;
+  color: #a4a4a4;
 }
 
-.language-list li i {
-  font-size: 15px;
-  margin-left: 6px;
+.languages li span {
+  color: #a4a4a4;
+  margin-right: 2px;
 }
 
 /* PROJECTS PAGE */
@@ -321,7 +324,7 @@ article {
   }
 
   header .name {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   header {
@@ -329,62 +332,58 @@ article {
   }
 
   nav a {
-    font-size: 0.73em;
+    font-size: 0.8em;
   }
 
   nav ul {
     gap: 13px;
   }
-
-  .resume-content {
-    flex-direction: column;
-  }
-
-  .skill-resume-list {
-    align-items: center;
-  }
-
-  .language-list {
-    align-items: center;
-  }
-
-  .educational-records {
-    margin-bottom: 20px;
-  }
-
-  .skills-list {
-    margin-bottom: 10px;
-  }
 }
 
 @media (max-width: 705px) {
+  .resume-content {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    gap: 30px;
+  }
+
+  .skills-list,
+  .educational-records,
+  .languages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resume-head3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .skill-resume-list,
+  .educational-record,
+  .language-list {
+    width: 80%;
+    max-width: none;
+  }
+
   .skill-resume-list {
-    font-size: 1em;
-    padding: 10px;
-  }
-
-  .skill-resume-list-item i {
-    font-size: 13px;
-  }
-
-  .intro .resume-head3 {
-    font-size: 1.3em;
-  }
-
-  .intro .resume-head1 {
-    font-size: 2.2em;
-  }
-
-  .language-list li i {
-    font-size: 13px;
+    align-items: center;
   }
 
   .language-list {
-    padding: 10px;
+    align-items: center;
   }
 
   .educational-record {
-    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .resume-head1 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
   }
 
   .projects-content {

@@ -1,4 +1,4 @@
-const particleconfig = {
+particlesJS('particlejs', {
   particles: {
     number: {
       value: 55,
@@ -102,8 +102,7 @@ const particleconfig = {
     },
   },
   retina_detect: true,
-};
-particlesJS('particlejs', particleconfig);
+});
 
 // the function that handle header buttons functional
 const toggleElementButtons = function (elem) {

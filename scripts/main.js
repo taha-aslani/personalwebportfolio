@@ -105,6 +105,7 @@ const particleconfig = {
 };
 particlesJS('particlejs', particleconfig);
 
+// the function that handle header buttons functional
 const toggleElementButtons = function (elem) {
   if (elem.id == 'name') {
     return;
@@ -137,6 +138,7 @@ const toggleElementButtons = function (elem) {
   }
 };
 
+// added an event to all 'a' tags to listen clicks and call the above function
 document.querySelectorAll('a').forEach((a) => {
   a.addEventListener('click', function () {
     toggleElementButtons(this);

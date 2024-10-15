@@ -45,7 +45,7 @@ body {
     rgba(152, 250, 252, 0.668) 0%,
     rgba(31, 74, 250, 0.5) 100%
   );
-  position: absolute;
+  position: fixed;
   animation: rotate 15s ease-in-out alternate infinite;
   z-index: 0;
 }
@@ -148,9 +148,9 @@ nav a:hover {
 }
 
 #particlejs {
-  position: absolute;
-  width: 95vw;
-  height: 95vh;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
   background-image: url('');
   background-repeat: no-repeat;
   background-size: cover;
@@ -459,6 +459,7 @@ article {
   .contact-des {
     flex-direction: column;
     gap: 20px;
+    margin: 20px 10px 50px;
   }
 
   .contact-socials {

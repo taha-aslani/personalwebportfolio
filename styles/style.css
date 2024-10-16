@@ -448,6 +448,19 @@ textarea {
   nav ul {
     gap: 13px;
   }
+
+  .contact-form {
+    grid-template-areas:
+      'email email email email'
+      'name name name name'
+      'text text text text'
+      'text text text text';
+  }
+
+  .contact-form > input,
+  textarea {
+    padding: 10px 13px;
+  }
 }
 
 @media (max-width: 705px) {

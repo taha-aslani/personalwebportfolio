@@ -350,6 +350,71 @@ article {
   transition: all 0.2s;
 }
 
+.contact-form {
+  display: grid;
+  grid-template-areas:
+    'email email name name'
+    'text text text text'
+    'text text text text';
+  gap: 10px;
+}
+
+.contact-form-div {
+  background-color: #11111164;
+  backdrop-filter: blur(3px);
+  border-radius: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.559);
+  padding: 20px;
+  position: relative;
+}
+
+.contact-soon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(100px);
+  background-color: #11111164;
+  border-radius: 13px;
+}
+
+.contact-soon {
+  font-size: 24px;
+  color: white;
+  text-align: center;
+}
+
+.contact-email-input {
+  grid-area: email;
+}
+
+.contact-text-input {
+  grid-area: name;
+}
+
+.contact-textarea-input {
+  grid-area: text;
+  resize: vertical;
+  min-height: 100px;
+  height: 120px;
+  max-height: 200px;
+}
+
+.contact-form > input,
+textarea {
+  background-color: #11111164;
+  backdrop-filter: blur(3px);
+  outline: none;
+  padding: 12px 25px;
+  border-radius: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.559);
+  font-family: 'Hamishe', Arial, Helvetica, sans-serif;
+}
+
 @media (max-width: 640px) {
   .gradientback {
     width: 55vw;

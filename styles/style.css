@@ -377,7 +377,7 @@ article {
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(3px);
   background-color: #11111164;
   border-radius: 13px;
 }

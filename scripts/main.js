@@ -112,8 +112,8 @@ const toggleElementButtons = function (elem) {
     return;
   } else {
     let actives = document.querySelectorAll('.active');
-    actives.forEach((a) => {
-      a.classList.remove('active');
+    actives.forEach((active) => {
+      active.classList.remove('active');
     });
     elem.classList.add('active');
     switch (elem.id) {

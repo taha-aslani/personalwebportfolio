@@ -313,6 +313,10 @@ article {
 }
 
 /* CONTACT PAGE */
+#contact {
+  padding-bottom: 20px;
+}
+
 .contact-head1 {
   text-align: center;
   margin: 0 auto 50px;

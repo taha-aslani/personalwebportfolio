@@ -140,7 +140,7 @@ const toggleElementButtons = function (elem) {
 // added an event to all 'a' tags to listen clicks and call the above function
 document.querySelectorAll('a').forEach((a) => {
   a.addEventListener('click', function (e) {
-    toggleElementButtons(this);
     e.preventDefault();
+    toggleElementButtons(this);
   });
 });

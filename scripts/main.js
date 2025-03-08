@@ -180,7 +180,7 @@ form.addEventListener('submit', (event) => {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: formData,
+          body: JSON.stringify(formData),
         })
           .then((res) => {
             if (res.ok) {

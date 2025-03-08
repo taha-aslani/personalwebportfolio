@@ -357,9 +357,10 @@ article {
 .contact-form {
   display: grid;
   grid-template-areas:
-    'email email name name'
+    'name name email email'
     'text text text text'
-    'text text text text';
+    'text text text text'
+    '. . . cap';
   gap: 10px;
 }
 
@@ -412,11 +413,32 @@ article {
 textarea {
   background-color: #11111164;
   backdrop-filter: blur(3px);
+  color: #e0e0e0;
   outline: none;
   padding: 12px 25px;
   border-radius: 13px;
   border: 1px solid rgba(255, 255, 255, 0.559);
   font-family: 'Hamishe', Arial, Helvetica, sans-serif;
+}
+
+#submit-contact-form-btn {
+  grid-area: cap;
+  border-radius: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.559);
+  background-color: #11111164;
+  backdrop-filter: blur(3px);
+  outline: none;
+  cursor: pointer;
+  color: #e0e0e0;
+  padding: 5px;
+  margin-top: 3px;
+  font-size: 1.2rem;
+  font-family: 'Hamishe', Arial, Helvetica, sans-serif;
+  transition: all 0.15s ease-out;
+}
+
+#submit-contact-form-btn:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 640px) {
@@ -458,7 +480,8 @@ textarea {
       'email email email email'
       'name name name name'
       'text text text text'
-      'text text text text';
+      'text text text text'
+      'cap cap cap cap';
   }
 
   .contact-form > input,

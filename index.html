@@ -181,14 +181,7 @@
         </div>
       </div>
       <div class="contact-form-div">
-        <form action="" method="post" class="contact-form">
-          <input
-            type="email"
-            name="contact_email"
-            id="email_input"
-            class="contact-email-input"
-            placeholder="ایمیل شما"
-          />
+        <form id="contact-form" class="contact-form">
           <input
             type="text"
             name="contact_name"
@@ -196,19 +189,29 @@
             class="contact-text-input"
             placeholder="اسم شما"
           />
+          <input
+            type="email"
+            name="contact_email"
+            id="email_input"
+            class="contact-email-input"
+            placeholder="ایمیل شما"
+          />
           <textarea
             name="contact_textarea"
             id="textarea_input"
             class="contact-textarea-input"
             placeholder="توضیحات شما"
           ></textarea>
+          <button type="submit" id="submit-contact-form-btn">بفرست</button>
         </form>
-        <div class="contact-soon-overlay">
+        <!-- <div class="contact-soon-overlay">
           <div class="contact-soon">بزودی...</div>
-        </div>
+        </div> -->
       </div>
     </article>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfEIO0qAAAAAG2aI25B01I1kZf4P7mxTz3Lawn_"></script>
     <script src="./scripts/particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./scripts/main.js"></script>
   </body>
 </html>

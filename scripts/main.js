@@ -137,10 +137,83 @@ const toggleElementButtons = function (elem) {
   }
 };
 
+const form = document.getElementById('contact-form');
+
 // added an event to all 'a' tags to listen clicks and call the above function
 document.querySelectorAll('a').forEach((a) => {
   a.addEventListener('click', function (e) {
     e.preventDefault();
     toggleElementButtons(this);
+  });
+});
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const STORAGE_KEY = 'contact_form_submissions';
+  const submissions = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+  const now = Date.now();
+
+  const recentSubmissions = submissions.filter(
+    (time) => now - time < 60 * 60 * 1000
+  );
+
+  if (recentSubmissions.length >= 2) {
+    Swal.fire({
+      icon: 'error',
+      title: 'زشته نکن...',
+      text: 'تو یک ساعت گذشته 2 بار پیام فرستادی یکم صبر کن...',
+    });
+    return;
+  }
+  const formData = FormData(form);
+  grecaptcha.ready(function () {
+    grecaptcha
+      .execute('6LfEIO0qAAAAAG2aI25B01I1kZf4P7mxTz3Lawn_', { action: 'submit' })
+      .then(function (token) {
+        formData.append('g-recaptcha-token', token);
+        fetch('http://localhost:3000/api/contact', {
+          method: 'POST',
+          body: formData,
+        })
+          .then((res) => {
+            if (res.ok) {
+              Swal.fire({
+                icon: 'success',
+                title: 'پیامت رفت...',
+                text: 'پیامت رو با موفقیت فرستادی، از طرف من هم یه ایمیل دریافت کردی!',
+              });
+              recentSubmissions.push(now);
+              localStorage.setItem(
+                STORAGE_KEY,
+                JSON.stringify(recentSubmissions)
+              );
+              return;
+            } else {
+              return res.json();
+            }
+          })
+          .then((json) => {
+            if (typeof json !== 'object') return;
+            if (+json.message.status === 429) {
+              return Swal.fire({
+                icon: 'error',
+                title: 'بد شد',
+                text: 'پس حاکر هم هستی ها؟!!',
+              });
+            }
+            Swal.fire({
+              icon: 'error',
+              title: 'اوپس...',
+              text: 'یه مشکلی پیش اومد...',
+            });
+          })
+          .catch((e) => {
+            Swal.fire({
+              icon: 'error',
+              title: 'اوپس...',
+              text: 'یه مشکلی پیش اومد...',
+            });
+          });
+      });
   });
 });

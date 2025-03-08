@@ -147,6 +147,8 @@ document.querySelectorAll('a').forEach((a) => {
   });
 });
 
+const submitButton = document.getElementById('submit-contact-form-btn');
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const STORAGE_KEY = 'contact_form_submissions';
@@ -175,6 +177,8 @@ form.addEventListener('submit', (event) => {
           message: document.getElementById('textarea_input').value.trim(),
           'g-recaptcha-token': token,
         };
+        submitButton.disabled = true;
+        submitButton.innerText = 'در حال ارسال ...';
         fetch('https://tahaaslaniback.liara.run/api/contact', {
           method: 'POST',
           headers: {
@@ -200,6 +204,8 @@ form.addEventListener('submit', (event) => {
             }
           })
           .then((json) => {
+            submitButton.disabled = false;
+            submitButton.innerText = 'بفرست';
             if (typeof json !== 'object') return;
             if (+json.message.status === 429) {
               return Swal.fire({

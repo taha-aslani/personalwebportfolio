@@ -175,8 +175,12 @@ form.addEventListener('submit', (event) => {
           message: document.getElementById('textarea_input').value.trim(),
           'g-recaptcha-token': token,
         };
-        fetch('http://tahaaslaniback.liara.run:3000/api/contact', {
+        fetch('https://tahaaslaniback.liara.run:3000/api/contact', {
           method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          credentials: 'include',
           body: formData,
         })
           .then((res) => {

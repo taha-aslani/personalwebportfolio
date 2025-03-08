@@ -165,12 +165,16 @@ form.addEventListener('submit', (event) => {
     });
     return;
   }
-  const formData = FormData(form);
   grecaptcha.ready(function () {
     grecaptcha
       .execute('6LfEIO0qAAAAAG2aI25B01I1kZf4P7mxTz3Lawn_', { action: 'submit' })
       .then(function (token) {
-        formData.append('g-recaptcha-token', token);
+        const formData = {
+          name: document.getElementById('contact_input').value.trim(),
+          email: document.getElementById('email_input').value.trim(),
+          message: document.getElementById('textarea_input').value.trim(),
+          'g-recaptcha-token': token,
+        };
         fetch('http://tahaaslaniback.liara.run:3000/api/contact', {
           method: 'POST',
           body: formData,

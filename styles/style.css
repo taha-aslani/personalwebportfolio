@@ -83,11 +83,15 @@ nav ul {
   z-index: 3;
 }
 
-nav a {
+nav button {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
   transition: all 0.2s;
+  font-family: 'Hamishe', Arial, Helvetica, sans-serif;
+  background: none;
+  border: none;
+  font-size: 0.9rem;
 }
 
 .name a {
@@ -95,7 +99,7 @@ nav a {
   color: #fff;
 }
 
-nav a:hover {
+nav button:hover {
   color: #b4b4b4;
   transition: all 0.2s;
 }
@@ -179,12 +183,12 @@ article.active {
   animation: fade 0.75s ease-out backwards;
 }
 
-a.active {
+button.active {
   color: rgb(79, 252, 255);
   transition: all 0.2s;
 }
 
-a.active:hover {
+button.active:hover {
   color: rgb(61, 169, 171);
   transition: all 0.2s;
 }
@@ -460,19 +464,19 @@ textarea {
   }
 
   header .name {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   header {
     padding: 20px;
   }
 
-  nav a {
-    font-size: 0.8em;
+  nav button {
+    font-size: 0.7em;
   }
 
   nav ul {
-    gap: 13px;
+    gap: 10px;
   }
 
   .contact-form {

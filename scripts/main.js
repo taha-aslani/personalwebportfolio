@@ -140,12 +140,18 @@ const toggleElementButtons = function (elem) {
 const form = document.getElementById('contact-form');
 
 // added an event to all 'a' tags to listen clicks and call the above function
-document.querySelectorAll('a').forEach((a) => {
-  a.addEventListener('click', function (e) {
-    e.preventDefault();
-    toggleElementButtons(this);
+document
+  .querySelectorAll(
+    '#resumebutton, #projectsbutton, #contactbutton, #aboutmebutton'
+  )
+  .forEach((a) => {
+    a.addEventListener('click', function (e) {
+      if (!e.target.classList.contains('social')) {
+        e.preventDefault();
+        toggleElementButtons(this);
+      }
+    });
   });
-});
 
 const submitButton = document.getElementById('submit-contact-form-btn');
 

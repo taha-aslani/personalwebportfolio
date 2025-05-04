@@ -181,7 +181,6 @@ form.addEventListener('submit', (event) => {
           name: document.getElementById('contact_input').value.trim(),
           email: document.getElementById('email_input').value.trim(),
           message: document.getElementById('textarea_input').value.trim(),
-          'g-recaptcha-token': token,
         };
         submitButton.disabled = true;
         submitButton.innerText = 'در حال ارسال ...';
